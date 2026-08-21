@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="about-column about-bio-section">
                 <h2 class="about-title">About</h2>
                 <p class="about-p">I create unique graphic universes revolving around simple shapes and a high typographic rigor. I approach each project with a rational vision in order to produce minimalist and powerful concepts.</p>
-                <p class="about-p">Based in Paris, I worked with the studio <a href="https://midiquinze.com/" target="_blank" rel="noopener noreferrer" class="about-link">Midi:Quinze↗</a>, and in an international agency with <a href="https://dragonrouge.com/" target="_blank" rel="noopener noreferrer" class="about-link">Dragon Rouge↗</a>. Since 2024, I have been developing <a href="https://www.instagram.com/aspect_wakemag/" target="_blank" rel="noopener noreferrer" class="about-link">Aspect Wakemag↗</a> as an art director.</p>
+                <p class="about-p">Based in Paris, I worked with the studio <a href="https://midiquinze.com/" target="_blank" rel="noopener noreferrer" class="about-link">Midi:Quinze↗&#xFE0E;</a>, and in an international agency with <a href="https://dragonrouge.com/" target="_blank" rel="noopener noreferrer" class="about-link">Dragon Rouge↗&#xFE0E;</a>. Since 2024, I have been developing <a href="https://www.instagram.com/aspect_wakemag/" target="_blank" rel="noopener noreferrer" class="about-link">Aspect Wakemag↗&#xFE0E;</a> as an art director.</p>
             </div>
 
             <!-- Row 1: Contact (Col 3-4) -->

@@ -640,7 +640,7 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
         align-items: center;
         justify-content: flex-start;
         margin-top: 0;
-        padding-bottom: 150px; /* Espace réservé pour la description et les points en bas */
+        padding-bottom: 80px; /* Espace réservé pour la description et les points en bas */
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
@@ -1046,6 +1046,8 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
 /* About Section Styles */
 .about-section {
     background-color: var(--bg-color); /* Blanc opaque */
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
 .about-grid {

@@ -26,7 +26,7 @@ export const projects = [
         project: "Magazine Issue 3",
         description: "Art direction and layout design for the annual revue Aspect Wakemag (Issue 3). Exploration of the aesthetic and creative dimensions of wakeboarding.",
         link: "https://aspectwakemag.fr/",
-        linkText: "aspectwakemag.fr ↗",
+        linkText: "aspectwakemag.fr ↗\uFE0E",
         slides: [
             { layout: "1-80vh", images: [{ src: "images/aspect/aspect-num3cover.webp", name: "Issue 3 Front Cover" }] },
             { layout: "1-80vh", images: [{ src: "images/aspect/aspect-num3-p136-137.webp", name: "Issue 3, p136-137" }] },
@@ -43,7 +43,7 @@ export const projects = [
         project: "HQ showroom signage",
         description: "Signage and scenography design for the Nike Paris showroom (300m²). Modular raw steel system featuring a custom typeface inspired by metallic scaffolding.",
         link: "https://midiquinze.com/",
-        linkText: "agency: Midi:Quinze ↗",
+        linkText: "agency: Midi:Quinze ↗\uFE0E",
         slides: [
             { layout: "1-full", images: [{ src: "images/sp26/main-entrance-signage.webp", name: "Main Entrance Signage" }] },
             { 
@@ -65,7 +65,7 @@ export const projects = [
         project: "Visual identity",
         description: "80s-inspired visual identity for the launch of the Napkey Chord™, a new cloud music synthesizer. Logotype, vinyl records, and printed collateral.",
         link: "https://midiquinze.com/",
-        linkText: "agency: Midi:Quinze ↗",
+        linkText: "agency: Midi:Quinze ↗\uFE0E",
         slides: [
             { layout: "1-cover", images: [{ src: "images/napkey/napkey-instruments-logo.webp", name: "Napkey Instruments Logo" }] },
             { layout: "1-cover", images: [{ src: "images/napkey/napkey-chord.webp", name: "Napkey Chord" }] },
@@ -129,7 +129,7 @@ export const projects = [
         project: "Portfolio Book",
         description: "Creation of an artist catalogue for sculptor Guillaume Campredon. This editorial design showcases his sculptures through a refined layout, playing with the balance between full-page images and explanatory texts. The book was conceived as a collector's item, serving both as a gallery portfolio and public communication material. It reflects Guillaume Campredon's artistic universe, emphasizing the strength and singularity of his sculptural work.",
         link: "https://midiquinze.com/",
-        linkText: "agency: Midi:Quinze ↗",
+        linkText: "agency: Midi:Quinze ↗\uFE0E",
         slides: [
             { layout: "1-full", images: [{ src: "images/gc/interior-design.webp", name: "Interior Scenography View" }] },
             { layout: "1-vh", images: [{ src: "images/gc/gc-backcover.webp", name: "Book Back Cover" }] },
@@ -146,7 +146,7 @@ export const projects = [
         project: "Visual Identity & Festival Poster",
         description: "Visual identity and poster design for the 2026 edition of the Franco Teens Film Festival.",
         link: null,
-        linkText: "agency: Midi:Quinze ↗",
+        linkText: "agency: Midi:Quinze ↗\uFE0E",
         slides: [
             { layout: "1-full", bg: "grey", images: [{ src: "images/francoteens/full-poster.webp", name: "Festival Poster View" }] },
             { layout: "1-full", images: [{ src: "images/francoteens/poster-detail.webp", name: "Poster Graphic Detail" }] }
