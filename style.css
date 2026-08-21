@@ -75,7 +75,7 @@ body {
     font-weight: var(--fw-main);
     overflow: hidden;
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     font-size: var(--fs-main);
     line-height: var(--lh-main);
     letter-spacing: var(--ls-main);
@@ -84,7 +84,7 @@ body {
 
 #portfolio-container {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
@@ -96,7 +96,7 @@ body {
 
 .project-section {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
     scroll-snap-align: start;
     padding: 0;
@@ -359,7 +359,7 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
 .slider-area {
     margin-top: auto;
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     padding-bottom: calc(var(--margin-y) + var(--fs-main) * var(--lh-main) + var(--margin-y));
     width: 100%;
     overflow: hidden;
@@ -635,7 +635,7 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
         top: 0;
         left: 0;
         height: 100vh;
-        height: 100dvh;
+        height: 100svh;
         width: 100vw;
         align-items: center;
         justify-content: flex-start;
