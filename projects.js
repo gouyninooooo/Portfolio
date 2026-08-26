@@ -12,7 +12,7 @@ export const projects = [
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Custom Logotype" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-cle-en-main.webp", name: "Visual Concept" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-envelope-close-up.webp", name: "Envelope Detail" }] },
-            { layout: "1-80vh", images: [{ src: "images/artemis/artemis-certificate-authentic.webp", name: "Authenticity Certificate" }] },
+            { layout: "1-80vh", images: [{ src: "images/artemis/artemis-linkedin-4.gif", name: "Authenticity Certificate" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-pattern.webp", name: "Visual Pattern" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-papeterie.webp", name: "Stationery Design" }] },
             { layout: "1-80vh", images: [{ src: "images/artemis/artemis-tableau.webp", name: "Framed Artwork Presentation" }] }
