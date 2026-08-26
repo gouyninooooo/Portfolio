@@ -442,9 +442,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <ul class="about-list">
                         <li><span class="about-year">2023</span><span class="about-event">Miam Magazine 10</span></li>
                         <li><span class="about-year">2024</span><span class="about-event">L’école du non savoir, Ruedi Baur</span></li>
-                        <li><span class="about-year">2024</span><span class="about-event">Aspect Wake Magazine</span></li>
-                        <li><span class="about-year">2025</span><span class="about-event">Aspect Wake Magazine</span></li>
-                        <li><span class="about-year">2026</span><span class="about-event">Aspect Wake Magazine</span></li>
+                        <li><span class="about-year">2024</span><span class="about-event">Aspect Wake Magazine 1</span></li>
+                        <li><span class="about-year">2025</span><span class="about-event">Aspect Wake Magazine 2</span></li>
+                        <li><span class="about-year">2026</span><span class="about-event">Aspect Wake Magazine 3</span></li>
                     </ul>
                 </div>
             </div>
@@ -492,9 +492,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function getActiveProjectIndex() {
     const container = document.getElementById('portfolio-container');
     if (!container) return 0;
-    const scrollTop = container.scrollTop;
-    const height = window.innerHeight;
-    return Math.round(scrollTop / height);
+    const sections = container.querySelectorAll('.project-section');
+    let activeIndex = 0;
+    let minDistance = Infinity;
+
+    sections.forEach((section, index) => {
+        const dist = Math.abs(section.getBoundingClientRect().top);
+        if (dist < minDistance) {
+            minDistance = dist;
+            activeIndex = index;
+        }
+    });
+
+    return activeIndex;
 }
 
 function initIntroOverlay() {
@@ -661,31 +671,30 @@ function initDetailsScrollFade() {
     const sections = container.querySelectorAll('.project-section');
     
     const updateDetails = () => {
-        const scrollTop = container.scrollTop;
         const height = window.innerHeight;
-        const fadeDistance = height / 8; // Disparition à 1/8ème de la hauteur de l'écran
+        const fadeDistance = height * 0.4; // Tolérance de 40% de la hauteur de l'écran
 
-        sections.forEach((section, index) => {
+        sections.forEach((section) => {
             const details = section.querySelector('.project-details');
             const dots = section.querySelector('.pagination-dots');
             if (!details) return;
 
-            const d = scrollTop - (index * height);
-            const absD = Math.abs(d);
+            const rect = section.getBoundingClientRect();
+            const absD = Math.abs(rect.top);
 
             if (absD < fadeDistance) {
                 const progress = absD / fadeDistance;
-                const opacityVal = (1 - progress).toFixed(3);
-                const translateY = -progress * 20; // Léger effet de montée de 20px
+                const opacityVal = Math.max(0, 1 - progress).toFixed(3);
+                const translateY = (-progress * 15).toFixed(1);
 
                 details.style.opacity = opacityVal;
-                details.style.transform = `translateY(${translateY}px)`;
-                details.style.pointerEvents = 'auto';
+                details.style.transform = `translate3d(0, ${translateY}px, 0)`;
+                details.style.pointerEvents = opacityVal > 0.1 ? 'auto' : 'none';
 
                 if (dots) {
                     dots.style.opacity = opacityVal;
-                    dots.style.transform = `translateY(${translateY}px)`;
-                    dots.style.pointerEvents = 'auto';
+                    dots.style.transform = `translate3d(0, ${translateY}px, 0)`;
+                    dots.style.pointerEvents = opacityVal > 0.1 ? 'auto' : 'none';
                 }
             } else {
                 details.style.opacity = '0';
@@ -698,7 +707,7 @@ function initDetailsScrollFade() {
         });
     };
 
-    container.addEventListener('scroll', updateDetails);
+    container.addEventListener('scroll', updateDetails, { passive: true });
     updateDetails();
     window.addEventListener('resize', updateDetails);
 

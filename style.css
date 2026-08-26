@@ -87,6 +87,8 @@ body {
     height: 100svh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
     scrollbar-width: none;
     background-color: var(--bg-color); /* Assure le rendu de mix-blend-mode sur Safari */
 }
@@ -100,6 +102,7 @@ body {
     height: 100svh;
     width: 100vw;
     scroll-snap-align: start;
+    scroll-snap-stop: always; /* Force l'arrêt projet par projet (empêche de sauter plusieurs projets) */
     padding: 0;
     position: relative;
     display: flex;
