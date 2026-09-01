@@ -10,12 +10,24 @@ export const projects = [
         linkText: "",
         slides: [
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Custom Logotype" }] },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-cle-en-main.webp", name: "Visual Concept" }] },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-envelope-close-up.webp", name: "Envelope Detail" }] },
-            { layout: "1-80vh", images: [{ src: "images/artemis/artemis-linkedin-4.gif", name: "Authenticity Certificate" }] },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-pattern.webp", name: "Visual Pattern" }] },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-papeterie.webp", name: "Stationery Design" }] },
-            { layout: "1-80vh", images: [{ src: "images/artemis/artemis-tableau.webp", name: "Framed Artwork Presentation" }] }
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-desk-painting.webp", name: "Desk Painting Presentation" }] },
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-buisness-card.webp", name: "Business Cards" }] },
+            { 
+                layout: "2", 
+                images: [
+                    { src: "images/artemis/artemis-certificat-authenticite.webp", name: "Authenticity Certificate" },
+                    { src: "images/artemis/artemis-enveloppe-close-up.webp", name: "Envelope Close-Up" }
+                ] 
+            },
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-details-painting.webp", name: "Painting Details" }] },
+            { 
+                layout: "2", 
+                images: [
+                    { src: "images/artemis/artemis-catalogue-graphics.webp", name: "Catalogue Graphics" },
+                    { src: "images/artemis/artemis-painting.webp", name: "Framed Painting" }
+                ] 
+            },
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype-stamp.webp", name: "Logotype Stamp Detail" }] }
         ]
     },
     {

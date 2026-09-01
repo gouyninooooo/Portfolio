@@ -23,7 +23,7 @@ function getDisplaySlides(project) {
     if (isDesktop()) return project.slides;
 
     return project.slides.flatMap((slide) => {
-        if (slide.layout === '2-stack' || slide.layout === '2-60vh') {
+        if (slide.layout === '2-stack' || slide.layout === '2-60vh' || slide.layout === '2') {
             return [slide];
         }
         return slide.images.map((img) => ({ layout: 1, images: [img] }));
