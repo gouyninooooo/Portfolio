@@ -27,7 +27,7 @@ export const projects = [
                     { src: "images/artemis/artemis-painting.webp", name: "Framed Painting" }
                 ] 
             },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype-stamp.webp", name: "Logotype Stamp Detail" }] }
+            { layout: "1-50vh", images: [{ src: "images/artemis/artemis-logotype-stamp.webp", name: "Logotype Stamp Detail" }] }
         ]
     },
     {
@@ -66,7 +66,8 @@ export const projects = [
                 ] 
             },
             { layout: "1-full", images: [{ src: "images/sp26/plan-and-grid.webp", name: "Signage Plan and Grid System" }] },
-            { layout: "1-60vh", images: [{ src: "images/sp26/full-panel.webp", name: "Showroom Full Panel View" }] }
+            { layout: "1-60vh", images: [{ src: "images/sp26/full-panel.webp", name: "Showroom Full Panel View" }] },
+            { layout: "1-50vh", images: [{ src: "images/sp26/panel-functionment.gif", name: "Panel Functionment" }] }
         ]
     },
     {
