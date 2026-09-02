@@ -9,7 +9,7 @@ export const projects = [
         link: null,
         linkText: "",
         slides: [
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Custom Logotype" }] },
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-painting-details.webp", name: "Custom Logotype" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-desk-painting.webp", name: "Desk Painting Presentation" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-buisness-card.webp", name: "Business Cards" }] },
             { 
@@ -19,7 +19,7 @@ export const projects = [
                     { src: "images/artemis/artemis-enveloppe-close-up.webp", name: "Envelope Close-Up" }
                 ] 
             },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-details-painting.webp", name: "Painting Details" }] },
+            { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Painting Details" }] },
             { 
                 layout: "2", 
                 images: [
