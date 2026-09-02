@@ -124,12 +124,12 @@ export const projects = [
         year: "2024",
         title: "Legendre Automobile",
         client: "Legendre Automobile",
-        project: "Visual identity & Riso printed supports",
-        description: "Riso printed supports for Legendre Automobile.",
+        project: "Visual identity & Printed supports",
+        description: "Printed supports for Legendre Automobile.",
         link: null,
         linkText: "",
         slides: [
-            { layout: "1-90vh", images: [{ src: "images/lgd/lgd-car-freshener.webp", name: "Riso Car Freshener" }] },
+            { layout: "1-90vh", images: [{ src: "images/lgd/lgd-car-freshener.webp", name: "Car Freshener" }] },
             { layout: "1-80vh", images: [{ src: "images/lgd/business-card.webp", name: "Riso business cards" }] },
             { layout: "1-80vh", images: [{ src: "images/lgd/a3print.webp", name: "Riso A3 print" }] }
         ]
