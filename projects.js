@@ -8,9 +8,16 @@ export const projects = [
         description: "Visual identity and custom logotype design for Artem’is, an artwork rental company. Creative direction and print production for stationery, catalogs, and brand collateral.",
         link: null,
         linkText: "",
-        slides: [
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-details-painting.webp", name: "Painting Details" }] },
-            { layout: "1-vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Logotype" }] },
+        slides: [{ layout: "1-vh", images: [{ src: "images/artemis/artemis-details-painting.webp", name: "Painting Details" }] },
+            { 
+                layout: "2", 
+                images: [
+                    { src: "images/artemis/artemis-catalogue-graphics.webp", name: "Catalogue Graphics" },
+                    { src: "images/artemis/artemis-painting.webp", name: "Framed Painting" }
+                ] 
+            },
+            
+            { layout: "1-50vh", images: [{ src: "images/artemis/artemis-logotype.webp", name: "Logotype" }] },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-buisness-card.webp", name: "Business Cards" }] },
             { 
                 layout: "2", 
@@ -20,13 +27,6 @@ export const projects = [
                 ] 
             },
             { layout: "1-vh", images: [{ src: "images/artemis/artemis-desk-painting.webp", name: "Desk Painting Presentation" }] },
-            { 
-                layout: "2", 
-                images: [
-                    { src: "images/artemis/artemis-catalogue-graphics.webp", name: "Catalogue Graphics" },
-                    { src: "images/artemis/artemis-painting.webp", name: "Framed Painting" }
-                ] 
-            },
             { layout: "1-50vh", images: [{ src: "images/artemis/artemis-logotype-stamp.webp", name: "Logotype Stamp Detail" }] }
         ]
     },
