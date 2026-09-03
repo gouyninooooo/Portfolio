@@ -71,6 +71,42 @@ export const projects = [
         ]
     },
     {
+        id: "jordan",
+        year: "2025",
+        title: "Jordan \"The One\" Showroom",
+        client: "Jordan Brand",
+        project: "Showroom Scenography",
+        description: "Scenography and spatial identity for the Jordan Brand showroom during Quai 54, conceived as a physical extension of 'The One' campaign.",
+        link: "https://midiquinze.com/",
+        linkText: "agency: Midi:Quinze ↗\uFE0E",
+        slides: [
+            { layout: "1-vh", images: [{ src: "images/jordan/jordan-ball-graphics.webp", name: "Jordan Ball Graphics" }] },
+            { layout: "1-vh", images: [{ src: "images/jordan/jordan-event-movie.mp4", name: "Jordan Event Movie" }] },
+            { layout: "1-80vh", images: [{ src: "images/jordan/jordan-showroom.webp", name: "Jordan Showroom View" }] },
+            { 
+                layout: "8-mosaic", 
+                images: [
+                    { src: "images/jordan/jordan-space-3d-1.webp", name: "3D Space 01" },
+                    { src: "images/jordan/jordan-space-3d-2.webp", name: "3D Space 02" },
+                    { src: "images/jordan/jordan-space-3d-3.webp", name: "3D Space 03" },
+                    { src: "images/jordan/jordan-space-3d-4.webp", name: "3D Space 04" },
+                    { src: "images/jordan/jordan-space-3d-5.webp", name: "3D Space 05" },
+                    { src: "images/jordan/jordan-space-3d-6.webp", name: "3D Space 06" },
+                    { src: "images/jordan/jordan-space-3d-7.webp", name: "3D Space 07" },
+                    { src: "images/jordan/jordan-space-3d-8.webp", name: "3D Space 08" }
+                ] 
+            },
+            { layout: "1-vh", images: [{ src: "images/jordan/jordan-quai54.mp4", name: "Jordan Quai 54" }] },
+            { 
+                layout: "2-80vh", 
+                images: [
+                    { src: "images/jordan/jordan-showroom-field.webp", name: "Showroom Field View" },
+                    { src: "images/jordan/jordan-graphic-asset.webp", name: "Graphic Asset Detail" }
+                ] 
+            }
+        ]
+    },
+    {
         id: "napkey",
         year: "2025",
         title: "Napkey Instruments",

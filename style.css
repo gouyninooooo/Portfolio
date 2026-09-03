@@ -400,7 +400,8 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
     max-height: var(--slide-max-height);
 }
 
-.slide img {
+.slide img,
+.slide video {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -560,6 +561,85 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
     .layout-2 img {
         height: 100vh !important;
         max-height: 100vh !important;
+        width: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .layout-8-mosaic {
+        position: relative !important;
+        height: 100vh !important;
+        box-sizing: border-box !important;
+        margin-bottom: calc(-1 * (var(--margin-y) + var(--fs-main) * var(--lh-main) + var(--margin-y))) !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-rows: repeat(4, 1fr) !important;
+        column-gap: var(--gutter) !important;
+        row-gap: var(--space-1) !important;
+        padding-top: calc(var(--margin-y) + 4 * var(--fs-main)) !important;
+        padding-bottom: calc(var(--margin-y) + 4 * var(--fs-main)) !important;
+        padding-left: var(--margin-x) !important;
+        padding-right: var(--margin-x) !important;
+        align-items: center !important;
+    }
+
+    .layout-8-mosaic .slide-item {
+        display: flex !important;
+        align-items: center !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .layout-8-mosaic .slide-item:nth-child(1) { grid-column: 1 / span 2 !important; grid-row: 1 !important; justify-content: flex-end !important; }
+    .layout-8-mosaic .slide-item:nth-child(2) { grid-column: 3 / span 2 !important; grid-row: 1 !important; justify-content: flex-start !important; }
+    .layout-8-mosaic .slide-item:nth-child(3) { grid-column: 1 / span 2 !important; grid-row: 2 !important; justify-content: flex-end !important; }
+    .layout-8-mosaic .slide-item:nth-child(4) { grid-column: 3 / span 2 !important; grid-row: 2 !important; justify-content: flex-start !important; }
+    .layout-8-mosaic .slide-item:nth-child(5) { grid-column: 1 / span 2 !important; grid-row: 3 !important; justify-content: flex-end !important; }
+    .layout-8-mosaic .slide-item:nth-child(6) { grid-column: 3 / span 2 !important; grid-row: 3 !important; justify-content: flex-start !important; }
+    .layout-8-mosaic .slide-item:nth-child(7) { grid-column: 1 / span 2 !important; grid-row: 4 !important; justify-content: flex-end !important; }
+    .layout-8-mosaic .slide-item:nth-child(8) { grid-column: 3 / span 2 !important; grid-row: 4 !important; justify-content: flex-start !important; }
+
+    .layout-8-mosaic img {
+        max-height: 17vh !important;
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .layout-2-80vh {
+        position: relative !important;
+        height: 100vh !important;
+        margin-bottom: calc(-1 * (var(--margin-y) + var(--fs-main) * var(--lh-main) + var(--margin-y))) !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        column-gap: var(--gutter) !important;
+        padding: 0 var(--margin-x) !important;
+        align-items: center !important;
+    }
+
+    .layout-2-80vh .slide-item {
+        grid-column: span 2 !important;
+        height: 80vh !important;
+        max-height: 80vh !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .layout-2-80vh .slide-item:first-child {
+        justify-content: flex-end !important;
+    }
+
+    .layout-2-80vh .slide-item:last-child {
+        justify-content: flex-start !important;
+    }
+
+    .layout-2-80vh img {
+        height: 80vh !important;
+        max-height: 80vh !important;
         width: auto !important;
         max-width: 100% !important;
         object-fit: contain !important;
@@ -753,6 +833,61 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
         object-fit: contain !important;
     }
 
+    .layout-8-mosaic {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(4, 1fr) !important;
+        gap: var(--space-2) !important;
+        padding: calc(var(--margin-y) + 3 * var(--fs-main)) var(--margin-x) 80px var(--margin-x) !important;
+        height: 100% !important;
+        align-items: center !important;
+    }
+
+    .layout-8-mosaic .slide-item {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .layout-8-mosaic img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .layout-2-80vh {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: var(--space-2) !important;
+        padding: 0 var(--margin-x) !important;
+        height: 100% !important;
+    }
+
+    .layout-2-80vh .slide-item {
+        flex: 1 1 50% !important;
+        width: 50% !important;
+        height: 100% !important;
+        max-height: 80% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .layout-2-80vh img,
+    .layout-2-80vh video {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
     .layout-1-full .slide-item,
     .layout-1-vh .slide-item,
     .layout-1-cover .slide-item {
@@ -890,7 +1025,8 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
 }
 
 /* Layout images containment styles inside overview-block */
-.overview-block img {
+.overview-block img,
+.overview-block video {
     position: absolute !important;
     width: 100% !important;
     height: 100% !important;
@@ -937,6 +1073,44 @@ body:not(:has(#overview-overlay.is-visible)) .index-item.is-active {
     position: static !important;
     max-width: 100% !important;
     max-height: 46% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.overview-block.overview-layout-8-mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3%;
+    width: 100%;
+    height: 100%;
+    padding: 4%;
+}
+
+.overview-block.overview-layout-8-mosaic img {
+    position: static !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.overview-block.overview-layout-2-80vh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    width: 100%;
+    height: 100%;
+}
+
+.overview-block.overview-layout-2-80vh img {
+    position: static !important;
+    max-width: 46% !important;
+    max-height: 80% !important;
     width: auto !important;
     height: auto !important;
     object-fit: contain !important;

@@ -23,7 +23,7 @@ function getDisplaySlides(project) {
     if (isDesktop()) return project.slides;
 
     return project.slides.flatMap((slide) => {
-        if (slide.layout === '2-stack' || slide.layout === '2-60vh' || slide.layout === '2') {
+        if (slide.layout === '2-stack' || slide.layout === '2-60vh' || slide.layout === '2' || slide.layout === '2-80vh' || slide.layout === '8-mosaic') {
             return [slide];
         }
         return slide.images.map((img) => ({ layout: 1, images: [img] }));
@@ -31,6 +31,12 @@ function getDisplaySlides(project) {
 }
 
 function renderImage(img, { immediate = false, priority = false } = {}) {
+    const isVideo = img.src && (img.src.endsWith('.mp4') || img.src.endsWith('.webm') || img.type === 'video');
+
+    if (isVideo) {
+        return `<video src="${img.src}" autoplay loop muted playsinline aria-label="${img.name || ''}"></video>`;
+    }
+
     const attrs = [`alt="${img.name}"`, 'decoding="async"'];
 
     if (immediate) {
@@ -199,6 +205,9 @@ function loadSectionImages(section) {
         img.loading = 'lazy';
         img.removeAttribute('data-src');
     });
+    section.querySelectorAll('video').forEach((video) => {
+        video.play().catch(() => {});
+    });
 }
 
 function initSectionImageLoader(container) {
@@ -232,7 +241,7 @@ function buildIndex(projectList) {
             let collaboratorsHtml = '';
             if (project.id === 'aspect') {
                 collaboratorsHtml = `with <a href="https://www.instagram.com/alexisnilias/" target="_blank" rel="noopener noreferrer">Alexis Nilias</a>, <a href="https://www.instagram.com/soline.bourdon/" target="_blank" rel="noopener noreferrer">Soline Bourdon</a>`;
-            } else if (project.id === 'nike' || project.id === 'napkey' || project.id === 'gc' || project.id === 'francoteens') {
+            } else if (project.id === 'nike' || project.id === 'jordan' || project.id === 'napkey' || project.id === 'gc' || project.id === 'francoteens') {
                 collaboratorsHtml = `with <a href="https://midiquinze.com/" target="_blank" rel="noopener noreferrer">Midi:Quinze</a>`;
             }
 
@@ -750,6 +759,10 @@ function buildOverview(projectList) {
 
     const cardsHtml = shuffled.map(({ project, projectIndex, slide, slideIndex }) => {
         const imagesHtml = slide.images.map(img => {
+            const isVideo = img.src && (img.src.endsWith('.mp4') || img.src.endsWith('.webm') || img.type === 'video');
+            if (isVideo) {
+                return `<video src="${img.src}" autoplay loop muted playsinline aria-label="${img.name || ''}"></video>`;
+            }
             return `<img src="${img.src}" alt="${img.name || ''}" loading="lazy">`;
         }).join('');
 
