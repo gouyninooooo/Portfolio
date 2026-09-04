@@ -521,12 +521,12 @@ function initIntroOverlay() {
     if (!intro) return;
 
     const introImages = [
-        'images/loading-screen/artemis-envelope-close-up.webp',
+        'images/loading-screen/nino-cdv.webp',
         'images/loading-screen/aspect-keychain.webp',
         'images/loading-screen/gc-backcover.webp',
         'images/loading-screen/lgd-car-freshener.webp',
         'images/loading-screen/nap-tshirt.webp',
-        'images/loading-screen/nino-cdv.webp',
+        'images/loading-screen/artemis-envelope-close-up.webp',
         'images/loading-screen/QUETE 1.webp',
         'images/loading-screen/sp26.webp'
     ];
