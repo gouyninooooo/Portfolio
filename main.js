@@ -526,6 +526,7 @@ function initIntroOverlay() {
         'images/loading-screen/gc-backcover.webp',
         'images/loading-screen/lgd-car-freshener.webp',
         'images/loading-screen/nap-tshirt.webp',
+        'images/loading-screen/nino-cdv.webp',
         'images/loading-screen/QUETE 1.webp',
         'images/loading-screen/sp26.webp'
     ];
